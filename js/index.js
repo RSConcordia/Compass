@@ -2,13 +2,24 @@ var app = {
 	
 	};
 	
+	var contador = 0;	
+	
 	function start(){
-		var watchID = navigator.compass.watchHeading(onSuccess, onError);
+		navigator.compass.getCurrentHeading(onSuccess, onError);
 	}	
 	
 	function onSuccess(heading) {
-		var element = document.getElementById('status');
-		element.innerHTML = 'Heading: ' + heading.magneticHeading;
+		var compass = heading.magneticHeading;
+		var compass = parseInt(compass); 
+		
+		if (contador < 5){
+		document.getElementById('status').innerHTML += "<br> "+contador+" - "+compass;
+		contador++;
+		setTimeout(start, 800);
+		}else
+		{
+		document.getElementById('status').innerHTML += "<br>--§--";
+		}
 	};
 
 	function onError(compassError) {
