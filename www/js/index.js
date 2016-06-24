@@ -21,10 +21,8 @@
 	 */
 	try{
 		document.addEventListener("deviceready", function(){
-		alert("#24");
 			var compass = navigator.compass.watchHeading(
 				function onSuccess(heading){
-					alert("#27");
 					document.getElementById('needle').style.transform = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
 					document.getElementById('needle').style.webkitTransform  = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
 					document.getElementById('circle').style.transform = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
@@ -32,8 +30,7 @@
 				},
 				function error(e){
 					alert('CompassError: '+e.code);
-				},
-				{frequency: 500});
+				});
 		}, false);
 	}
 	catch(e){
