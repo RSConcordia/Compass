@@ -1,4 +1,4 @@
-	
+/* 	
 	function onSuccess(heading){
 		document.getElementById('needle').style.transform = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
 		document.getElementById('needle').style.webkitTransform  = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
@@ -18,3 +18,22 @@
 	document.addEventListener("deviceready", function(){
 		var watchID = navigator.compass.watchHeading(onSuccess, onError, {frequency: 500});
 	}, false);
+	 */
+		try{
+			document.addEventListener("deviceready", function(){
+				var compass = navigator.compass.watchHeading(
+					function onSuccess(heading){
+						document.getElementById('needle').style.transform = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
+						document.getElementById('needle').style.webkitTransform  = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
+						document.getElementById('circle').style.transform = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
+						document.getElementById('circle').style.webkitTransform  = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
+					},
+					function error(e){
+						alert(e.message);
+					},
+					{frequency: 500});
+			}, false);
+		}
+		catch(e){
+			alert(e.message);
+		}
