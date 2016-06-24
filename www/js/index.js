@@ -31,7 +31,7 @@
 					document.getElementById('circle').style.webkitTransform  = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
 				},
 				function error(e){
-					alert('CompassError: '+e.message);
+					alert('CompassError: '+e.code);
 				},
 				{frequency: 500});
 		}, false);
