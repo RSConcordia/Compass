@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<div id='header' class='header'>
-			<button id='btn-menu' class='main-menu' onclick=''>≡</button>
-		</div>
-		<div id='window' class='window'>
-		
-		<div class="garden">
-			<div class="ball">💸</div>
-		</div>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Rotating Compass</title>
+        <link rel="stylesheet" href="css/style.css">
+		<script src="cordova.js"></script>
+  </head>
 
-		<pre class="output"></pre>
+  <body>
+	<div id="clock" style='position: absolute;width: 200px; height: 200px;padding: 1%;top: 10%; left: 5%;border-radius: 50%;border: 1px solid rgba(60, 130, 170, 0.5);'>
+	
+		<img class='rosadosventos' src='compass.png' style='position: relative;width: 130%; height: 100%;left: -12%; top: 4%;list-style: none;margin: -10px 0 0 -10px;' />
+		<img id="needle" class="needle" src='compasshi.png' style='position: absolute;margin: 0;  padding: 0;top: 29%; left: 29.5%;list-style: none;margin: -10px 0 0 -10px; height:50%;' />
 		
-		</div>
-		<div id='footer' class='footer'>
-			<button class='btn-footer' onclick='start()'>Start</button>
-		</div>
-		<script type="text/javascript" src="js/script.js"></script>	
-	</body>
+		<ul id="circle" style='position: absolute;margin: 0;  padding: 0;top: 49%; left: 51%;width: 20px; height: 20px;list-style: none;margin: -10px 0 0 -10px;'>
+		</ul>		
+	</div>
+	
+	<script src="js/index.js"></script>
+  </body>
 </html>
