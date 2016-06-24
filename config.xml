@@ -16,7 +16,7 @@
 	<preference name="permissions" 		value="none"/>
     <preference name="DisallowOverscroll" value="true" /> 
 	
-	<plugin name="cordova-plugin-device-orientation" spec="1.0.1" source="npm" />
+	<plugin name="cordova-plugin-device-orientation" spec="1.0.1" source="pgb" />
 	
     <gap:plugin name="org.apache.cordova.device" />
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm"/>
