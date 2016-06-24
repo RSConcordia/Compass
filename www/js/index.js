@@ -27,10 +27,10 @@
 		window.addEventListener("deviceorientation",
 			function onSuccess(heading)
 			{
-					document.getElementById('needle').style.transform = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
-					document.getElementById('needle').style.webkitTransform  = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
-					document.getElementById('circle').style.transform = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
-					document.getElementById('circle').style.webkitTransform  = 'rotateZ('+parseInt(heading.magneticHeading)+'deg) translateX(0px)';
+				document.getElementById('needle').style.transform = 'rotateZ('+parseInt(heading.gamma)+'deg) translateX(0px)';
+				document.getElementById('needle').style.webkitTransform  = 'rotateZ('+parseInt(heading.gamma)+'deg) translateX(0px)';
+				document.getElementById('circle').style.transform = 'rotateZ('+parseInt(heading.gamma)+'deg) translateX(0px)';
+				document.getElementById('circle').style.webkitTransform  = 'rotateZ('+parseInt(heading.gamma)+'deg) translateX(0px)';
 			},
 		true);
 	}
