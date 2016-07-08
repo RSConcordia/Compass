@@ -27,9 +27,9 @@
  	document.addEventListener("deviceready", function(){
 		var compass = navigator.compass.watchHeading(
 			function onSuccess(heading){
-				var a = -parseInt(heading.magneticHeading) ;
-				document.getElementById('rosadosventos').style.transform = 'rotateZ('+a+'deg) translateX(0px)';
-				document.getElementById('rosadosventos').style.webkitTransform  = 'rotateZ('+a+'deg) translateX(0px)';
+				var a = parseInt(heading.magneticHeading) ;
+				document.getElementById('rosadosventos').style.transform = 'rotateZ(-'+a+'deg) translateX(0px)';
+				document.getElementById('rosadosventos').style.webkitTransform  = 'rotateZ(-'+a+'deg) translateX(0px)';
 			},
 			function error(e){
 				document.getElementById('status').innerHTML = e.message; 
